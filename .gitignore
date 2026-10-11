@@ -29,11 +29,8 @@ public/pagefind
 # pnpm
 .pnpm-store
 
-# docker compose
-compose.override.yaml
-
 .template-reference/
 screenshots/
 
-# Original images stay local; only publish optimized copies.
+# Optional temporary input directory for the image tool.
 .local-images/

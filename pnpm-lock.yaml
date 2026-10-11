@@ -41,9 +41,6 @@ importers:
       remark-toc:
         specifier: ^9.0.0
         version: 9.0.0
-      satori:
-        specifier: ^0.26.0
-        version: 0.26.0
       sharp:
         specifier: ^0.35.2
         version: 0.35.2
