@@ -1,7 +1,8 @@
 ---
-title: VPS 自建 VPN：服务器选购、Reality 部署与香港中转
+title: VPS 自建代理指南：选购、搭建与监控
 author: 酢浆草
 pubDatetime: 2026-10-11T16:57:57+08:00
+modDatetime: 2026-10-11T17:27:56+08:00
 description: 从 MeowVPS 推荐中选择服务器，检测 IP 类型，部署 VLESS Reality、香港 TCP 中转与本地监控。
 tags: [VPS, VPN, Reality, 网络, 自建服务]
 featured: false
