@@ -37,3 +37,36 @@
 :target {
   scroll-margin-block: 1rem;
 }
+
+/* Comfortable Chinese reading without a remote font dependency. */
+@layer base {
+  body {
+    line-height: 1.8;
+  }
+  pre,
+  code,
+  kbd,
+  samp {
+    @apply font-mono;
+  }
+  .app-prose {
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+  }
+  .app-prose h1,
+  .app-prose h2,
+  .app-prose h3,
+  .app-prose h4 {
+    line-height: 1.5;
+    font-style: normal;
+    letter-spacing: 0;
+  }
+  .app-prose pre {
+    overflow-wrap: normal;
+  }
+  .app-prose table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}

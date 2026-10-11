@@ -7,7 +7,12 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-app:
+    "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", Arial,
+    sans-serif;
+  --font-mono:
+    "SFMono-Regular", Consolas, "Liberation Mono", "PingFang SC",
+    "Microsoft YaHei", monospace;
 }
 
 /* Light theme values */

@@ -1,13 +1,14 @@
 {
-  "name": "astro-paper-v6",
+  "name": "oxalis-blog",
   "type": "module",
   "version": "6.1.0",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
+    "images:optimize": "node scripts/optimize-images.mjs",
     "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "astro check && astro build && pagefind --site dist && node scripts/copy-search.mjs",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",

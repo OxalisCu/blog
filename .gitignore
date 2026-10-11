@@ -31,3 +31,9 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+.template-reference/
+screenshots/
+
+# Original images stay local; only publish optimized copies.
+.local-images/
