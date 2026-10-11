@@ -148,7 +148,11 @@ pnpm images:optimize --input ../image-input/my-post --output public/images/my-po
 
 修改 `astro-paper.config.ts` 可以调整网站名称、描述、作者、分页数量和功能开关。首页介绍位于 `src/pages/index.astro`，关于页面位于 `src/content/pages/about.md`。
 
-部署前，将 `site.url` 从本地地址改为正式网站 URL，用于生成正确的 RSS、站点地图和规范链接。运行 `pnpm build` 后，将 `dist/` 部署到静态网站托管平台即可。
+目前配置为 GitHub Pages：`https://oxaliscu.github.io/blog/`。`astro-paper.config.ts` 中的 `site.url` 用于 RSS、站点地图和规范链接，`astro.config.ts` 中的 `base` 为 `/blog`。本地开发地址也带此路径：`http://localhost:4321/blog/`。Markdown 中以 `/` 开头的站内链接和图片会自动补上 `/blog` 前缀。
+
+仓库 Settings → Pages → Source 选择 **GitHub Actions**。`.github/workflows/deploy.yml` 会在代码推送到 `main` 时安装依赖、检查代码与格式、运行 `pnpm build`，然后将 `dist/` 上传并部署到 Pages；也可以在 Actions → Deploy to GitHub Pages → Run workflow 手动运行。无需将 `dist/` 提交到仓库。
+
+首次发布后，在 Actions 查看 build 和 deploy 两个任务是否成功，再访问网站。现有 `ci.yml` 继续负责 PR 检查。若更换域名或仓库名称，需要同步调整 `site.url` 与 `base`；使用独立域名根目录时，`base` 改为 `/`。
 
 目前使用静态分享图 `public/default-og.jpg`，可以替换成自己的图片。推送代码到 GitHub 与部署网站是两个独立步骤。
 

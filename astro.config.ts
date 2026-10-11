@@ -13,9 +13,13 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
+import { remarkBasePaths } from "./src/utils/remarkBasePaths";
+
+const base = "/blog";
 
 export default defineConfig({
   site: config.site.url,
+  base,
   integrations: [
     mdx(),
     sitemap({
@@ -33,6 +37,7 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [
+        [remarkBasePaths, { base }],
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
       ],
