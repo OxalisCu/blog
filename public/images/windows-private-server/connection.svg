@@ -1,0 +1,199 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1120"
+  height="470"
+  viewBox="0 0 1120 470"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">闲置电脑作为私人服务器的连接方式</title>
+  <desc id="desc">
+    日常电脑和手机加入同一个 Tailscale 私人网络。日常电脑通过 SSH 管理家里的
+    Windows 旧电脑；手机浏览器通过 HTTPS 访问 Tailscale
+    Serve，再转发到本机的个人服务，无需开放公网入口。
+  </desc>
+  <defs>
+    <marker
+      id="green-arrow"
+      markerWidth="8"
+      markerHeight="8"
+      refX="6.5"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0L8 4L0 8Z" fill="#087f63" />
+    </marker>
+    <marker
+      id="blue-arrow"
+      markerWidth="8"
+      markerHeight="8"
+      refX="6.5"
+      refY="4"
+      orient="auto"
+    >
+      <path d="M0 0L8 4L0 8Z" fill="#2563eb" />
+    </marker>
+    <style>
+      text {
+        font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+        fill: #172b43;
+      }
+      .title {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .label {
+        font-size: 26px;
+        font-weight: 700;
+      }
+      .body {
+        font-size: 21px;
+      }
+      .small {
+        font-size: 19px;
+      }
+      .muted {
+        fill: #53657b;
+      }
+      .card {
+        fill: #fff;
+        stroke: #ced9e6;
+        stroke-width: 1.5;
+      }
+      .green {
+        fill: none;
+        stroke: #087f63;
+        stroke-width: 3;
+        marker-end: url(#green-arrow);
+      }
+      .blue {
+        fill: none;
+        stroke: #2563eb;
+        stroke-width: 3;
+        marker-end: url(#blue-arrow);
+      }
+    </style>
+  </defs>
+  <rect width="1120" height="470" rx="18" fill="#f5f8fc" />
+  <text x="30" y="53" class="title">私人服务器的两条连接路径</text>
+
+  <rect x="24" y="138" width="230" height="112" rx="14" class="card" />
+  <g fill="none" stroke="#087f63" stroke-width="2.5" stroke-linejoin="round">
+    <rect x="48" y="166" width="43" height="29" rx="3" />
+    <path d="M42 203H97L91 195H48Z" />
+  </g>
+  <text x="112" y="183" class="label">日常电脑</text>
+  <text x="112" y="216" class="body muted">远程操作</text>
+
+  <rect x="24" y="276" width="230" height="112" rx="14" class="card" />
+  <g fill="none" stroke="#2563eb" stroke-width="2.5">
+    <rect x="53" y="302" width="29" height="52" rx="5" />
+    <path d="M61 309H74M63 347H72" />
+  </g>
+  <text x="103" y="320" class="label">手机等设备</text>
+  <text x="103" y="354" class="body muted">浏览器访问</text>
+
+  <rect
+    x="300"
+    y="100"
+    width="208"
+    height="308"
+    rx="16"
+    fill="#eaf0fd"
+    stroke="#bdcef4"
+    stroke-width="1.5"
+  />
+  <text
+    x="404"
+    y="245"
+    text-anchor="middle"
+    class="label"
+    style="fill: #244e9a"
+  >
+    Tailscale
+  </text>
+  <text
+    x="404"
+    y="283"
+    text-anchor="middle"
+    class="label"
+    style="fill: #244e9a"
+  >
+    私人网络
+  </text>
+
+  <rect
+    x="554"
+    y="100"
+    width="542"
+    height="308"
+    rx="16"
+    fill="#eef3f8"
+    stroke="#cbd6e3"
+    stroke-width="1.5"
+  />
+  <text x="825" y="133" text-anchor="middle" class="label">
+    家里的旧电脑 · Windows
+  </text>
+
+  <path d="M254 194H582" class="green" />
+  <path d="M254 332H582" class="blue" />
+  <text x="548" y="180" text-anchor="middle" class="body" style="fill: #087f63">
+    SSH
+  </text>
+  <text x="548" y="317" text-anchor="middle" class="body" style="fill: #2563eb">
+    HTTPS
+  </text>
+
+  <rect x="588" y="150" width="212" height="88" rx="12" class="card" />
+  <rect x="588" y="150" width="212" height="5" rx="2.5" fill="#087f63" />
+  <text x="694" y="188" text-anchor="middle" class="label">OpenSSH</text>
+  <text x="694" y="220" text-anchor="middle" class="body muted">
+    远程管理入口
+  </text>
+  <text x="960" y="201" text-anchor="middle" class="body muted">
+    安装依赖、部署项目
+  </text>
+
+  <rect x="588" y="288" width="212" height="88" rx="12" class="card" />
+  <rect x="588" y="288" width="212" height="5" rx="2.5" fill="#2563eb" />
+  <text
+    x="694"
+    y="326"
+    text-anchor="middle"
+    class="label"
+    style="font-size: 24px"
+  >
+    Tailscale Serve
+  </text>
+  <text x="694" y="358" text-anchor="middle" class="body muted">
+    私人 HTTPS 入口
+  </text>
+
+  <path d="M800 332H850" class="blue" />
+  <text x="827" y="314" text-anchor="middle" class="small muted">转发</text>
+  <rect
+    x="856"
+    y="288"
+    width="208"
+    height="88"
+    rx="12"
+    fill="#fff"
+    stroke="#9ebbf2"
+    stroke-width="1.5"
+  />
+  <text x="960" y="326" text-anchor="middle" class="label">个人服务</text>
+  <text
+    x="960"
+    y="357"
+    text-anchor="middle"
+    class="small muted"
+    style="font-family: Consolas, monospace"
+  >
+    127.0.0.1:8877
+  </text>
+
+  <text x="560" y="450" text-anchor="middle" class="body muted">
+    SSH 管理电脑，HTTPS 访问服务；两条路径都经过 Tailscale 私人网络
+  </text>
+</svg>
