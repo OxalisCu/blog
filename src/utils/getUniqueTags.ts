@@ -10,7 +10,7 @@ type Tag = {
 /**
  * Builds a de-duplicated, sorted tag list from posts.
  *
- * - Drafts and scheduled posts are excluded via `postFilter()`
+ * - Visibility follows `postFilter()`, including drafts during local development
  * - `tag` is the slug used in URLs; `tagName` is the original label for display
  * - Uniqueness is based on the slug (so differently-cased labels collapse)
  */
